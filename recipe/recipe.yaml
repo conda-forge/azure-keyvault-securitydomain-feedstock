@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: azure-keyvault-securitydomain
-  version: 1.0.0b1
+  version: "1.0.0b2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/azure_keyvault_securitydomain-${{ version }}.tar.gz
-  sha256: 3291a191e778a947e4b28ed01327892a93aedcf8e0a0dd674cf116cb11043776
+  sha256: 145f8c37efa59a2fb11c3112da1a2abe64463b1f4fcd129a86db8f796e2becee
 
 build:
   number: 0
