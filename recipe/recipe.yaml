@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: azure-keyvault-securitydomain
-  version: 1.0.0b1
+  version: "1.0.0b3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/azure_keyvault_securitydomain-${{ version }}.tar.gz
-  sha256: 3291a191e778a947e4b28ed01327892a93aedcf8e0a0dd674cf116cb11043776
+  sha256: aa05d7b88de336f906c7d4d535acb16cc6ceb50ee1e95d2a856dcd2410ab9c49
 
 build:
   number: 0
@@ -33,7 +33,9 @@ tests:
       imports:
         - azure.keyvault.securitydomain
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Microsoft Corporation Azure Keyvault Securitydomain Client Library for Python
